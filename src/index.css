@@ -97,6 +97,42 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family:
+      "Montserrat",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+}
+
+@media print {
+  header {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .parallax-hide-print {
+    display: none !important;
+  }
+
+  main > div {
+    page-break-after: always;
+    min-height: auto !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  img {
+    max-width: 100%;
+    break-inside: avoid;
+  }
+
+  * {
+    animation: none !important;
+    transform: none !important;
   }
 }
