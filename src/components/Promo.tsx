@@ -18,21 +18,41 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            src="https://cdn.poehali.dev/projects/8b055338-b3bc-43b3-bc49-a923aebdd4c3/files/aef207d7-36b1-4454-ab83-12fcc61ec075.jpg"
+            alt="Геометрические узоры юрты"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/50" />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
+      <h3 className="absolute top-12 right-6 text-amber-300 uppercase z-10 text-sm md:text-base lg:text-lg tracking-widest">
+        Математика традиций
       </h3>
 
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
-      </p>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="absolute bottom-12 left-6 right-6 md:right-auto z-10 max-w-2xl"
+      >
+        <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-snug font-light">
+          Казахская юрта — это живой учебник геометрии. Каждый изгиб, каждый узор и каждая опора
+          следуют точным математическим законам.
+        </p>
+        <div className="mt-8 flex gap-12">
+          {[
+            { num: "4", label: "Фигуры" },
+            { num: "6", label: "Элементов" },
+            { num: "360°", label: "Симметрия" },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <p className="text-amber-300 text-3xl font-bold">{stat.num}</p>
+              <p className="text-white/60 text-sm uppercase tracking-wider">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
