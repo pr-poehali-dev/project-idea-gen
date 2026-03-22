@@ -20,6 +20,12 @@ export default function Header({ className }: HeaderProps) {
           >
             Фигуры
           </a>
+          <a
+            href="/lottery"
+            className="text-white hover:text-amber-300 transition-colors duration-300 uppercase text-sm"
+          >
+            Лотерея
+          </a>
           <button
             onClick={() => window.print()}
             className="flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-stone-900 px-4 py-2 text-xs uppercase tracking-wide font-bold transition-colors duration-300 rounded"
